@@ -1,0 +1,14 @@
+{
+  "name": "bot-template",
+  "version": "1.0.0",
+  "description": "Discord.js bot template",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arcerion",
+  "license": "ISC"
+}
