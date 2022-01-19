@@ -1,16 +1,16 @@
-let { MessageEmbed } = require('discord.js');
+const { MessageEmbed } = require("discord.js")
 module.exports = {
 
     name: "help",
     desc: "Get a list of commands you can use with the bot.",
     aliases: ['help'],
     input: ['module'],
-    categories: [0],
+    categories: [1],
     execute: function (client, message, args, prefix) {
         let categories = require('../categories')
         let commands = Array.from(require('../../index').commands)
         let helpemb = new MessageEmbed()
-            .setTitle('HubMod modules')
+            .setTitle('Bot modules')
             .setDescription('Type `' + prefix + 'help [module]` for info on the commands in each module.')
             .setAuthor(`Requested by ${message.author.tag}`, message.author.displayAvatarURL())
             .setTimestamp()
@@ -31,7 +31,7 @@ module.exports = {
             let module = null
             Array.from(categories).forEach(c => {
 
-                if (c.name.startsWith(args[1])) {
+                if (c.name.toLowerCase().startsWith(args[1].toLowerCase())) {
                     module = [categories.indexOf(c), c]
                 }
 
