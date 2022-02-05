@@ -23,7 +23,7 @@ module.exports = {
     function getMD(t) {
       return `${new Date(Date.parse(t)).getMonth() + 1}/${new Date(
         Date.parse(t)
-      ).getDate()+1}`;
+      ).getDate()}`;
     }
 
     message.channel.send({
